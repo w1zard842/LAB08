@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Пошук - News Portal UA</title>
+<meta name="description" content="News Portal UA - Сучасний новинний портал з преміум-підпискою та ексклюзивним магазином мерчу. Надійна журналістика.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#2a955f",
+                        "surface-container-high": "#eae7e9",
+                        "surface-dim": "#dcd9db",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#002110",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f6f3f4",
+                        "secondary": "#b51822",
+                        "ink-subtle": "#4B5563",
+                        "on-secondary-fixed-variant": "#930013",
+                        "on-surface-variant": "#45464c",
+                        "on-background": "#1b1b1d",
+                        "primary-fixed": "#dce2f7",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb3ad",
+                        "primary-fixed-dim": "#c0c6db",
+                        "surface-container-highest": "#e5e2e3",
+                        "on-surface": "#1b1b1d",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fcf8fa",
+                        "surface-tint": "#575e70",
+                        "surface-paper": "#FFFFFF",
+                        "outline-variant": "#c6c6cd",
+                        "tertiary-fixed-dim": "#74db9d",
+                        "tertiary": "#000000",
+                        "secondary-fixed": "#ffdad7",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d93537",
+                        "primary": "#000000",
+                        "surface": "#fcf8fa",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#404758",
+                        "on-primary-fixed": "#141b2b",
+                        "state-success": "#38A169",
+                        "tertiary-container": "#002110",
+                        "inverse-primary": "#c0c6db",
+                        "on-secondary-fixed": "#410004",
+                        "tertiary-fixed": "#91f8b8",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f0edee",
+                        "inverse-surface": "#303031",
+                        "background": "#fcf8fa",
+                        "on-primary-container": "#7d8497",
+                        "primary-container": "#141b2b",
+                        "outline": "#76777d",
+                        "inverse-on-surface": "#f3f0f1",
+                        "on-tertiary-fixed-variant": "#00522f",
+                        "surface-variant": "#e5e2e3",
+                        "breaking-news": "#E53E3E",
+                        "on-secondary-container": "#fffbff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-xl": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["20px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "headline-xl": ["60px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.surface-container-lowest'); color: theme('colors.on-surface'); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-primary text-on-primary fixed top-0 w-full z-50 border-b border-outline">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md font-bold text-on-primary tracking-tight">News Portal UA</a>
+<nav class="hidden md:flex items-center gap-6">
+    <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200 font-label-bold text-label-bold uppercase tracking-wider" href="index.html">Головна</a>
+    <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200 font-label-bold text-label-bold uppercase tracking-wider" href="categories.html">Категорії</a>
+    <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200 font-label-bold text-label-bold uppercase tracking-wider" href="article.html">Статті</a>
+    <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200 font-label-bold text-label-bold uppercase tracking-wider" href="pricing.html">Підписка</a>
+    <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200 font-label-bold text-label-bold uppercase tracking-wider" href="shop.html">Магазин</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 font-label-bold text-label-bold uppercase tracking-wider">
+<a class="text-on-primary hover:opacity-100 transition-opacity duration-200" href="#">UA</a>
+<span class="text-on-primary opacity-50">/</span>
+<a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200" href="#">EN</a>
+</div>
+<button aria-label="Account" class="text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200 ml-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+<button aria-label="Shopping Cart" class="text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-[80px] flex flex-col items-center justify-center px-gutter">
+<div class="w-full max-w-[600px] mt-section-gap mb-section-gap">
+<!-- Search Header -->
+<div class="text-center mb-8">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4 hidden md:block">Пошук</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-4 md:hidden">Пошук</h1>
+<p class="font-body-lg text-body-lg text-ink-subtle">Введіть ключове слово, категорію або автора.</p>
+</div>
+<!-- Search Form -->
+<form class="relative group" id="searchForm">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline-variant group-focus-within:text-primary transition-colors duration-200">search</span>
+<input autocomplete="off" class="w-full h-14 pl-12 pr-4 bg-surface-container-lowest border-2 border-error text-on-surface font-body-lg text-body-lg rounded outline-none focus:border-secondary focus:ring-0 transition-colors placeholder:text-outline-variant" placeholder="Пошук..." type="text" value="Ultimate Premium Plan"/>
+<button aria-label="Clear search" class="absolute right-4 text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Error Message -->
+<div class="mt-3 flex items-start gap-2 text-error" role="alert">
+<span class="material-symbols-outlined text-[20px] mt-[2px]" style="font-variation-settings: 'FILL' 1;">error</span>
+<p class="font-body-md text-body-md font-medium">Тарифний план не знайдено. Спробуйте інший запит.</p>
+</div>
+</form>
+<!-- Search Suggestions (Ghost state since error is active) -->
+<div class="mt-8 pt-8 border-t border-surface-variant">
+<h2 class="font-label-bold text-label-bold text-outline uppercase tracking-wider mb-4">Популярні запити</h2>
+<div class="flex flex-wrap gap-3">
+<button class="px-4 py-2 border border-outline-variant rounded text-on-surface-variant font-label-bold text-label-bold hover:border-primary hover:text-primary transition-colors">Цифровий доступ</button>
+<button class="px-4 py-2 border border-outline-variant rounded text-on-surface-variant font-label-bold text-label-bold hover:border-primary hover:text-primary transition-colors">Випуск вихідного дня</button>
+<button class="px-4 py-2 border border-outline-variant rounded text-on-surface-variant font-label-bold text-label-bold hover:border-primary hover:text-primary transition-colors">Студентська знижка</button>
+<button class="px-4 py-2 border border-outline-variant rounded text-on-surface-variant font-label-bold text-label-bold hover:border-primary hover:text-primary transition-colors">Політика</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest text-on-surface w-full py-section-gap border-t border-outline mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start px-gutter max-w-container-max mx-auto gap-base">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-6 md:mb-0">
+                News Portal UA
+            </div>
+<div class="flex flex-col gap-4 w-full md:w-auto">
+<nav class="flex flex-col md:flex-row gap-4 md:gap-8">
+<a class="text-ink-subtle hover:text-primary transition-colors font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary rounded" href="#">Контакти: info@newsportal.ua</a>
+<a class="text-ink-subtle hover:text-primary transition-colors font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary rounded" href="#">Політика конфіденційності</a>
+<a class="text-ink-subtle hover:text-primary transition-colors font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary rounded" href="#">Умови використання</a>
+<a class="text-ink-subtle hover:text-primary transition-colors font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary rounded" href="#">RSS стрічка</a>
+</nav>
+<div class="text-ink-subtle font-body-md text-body-md mt-4 md:mt-0 md:text-right">
+                    © 2024 News Portal UA. Всі права захищені.
+                </div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script to clear input
+        document.querySelector('button[aria-label="Clear search"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            const input = this.previousElementSibling;
+            input.value = '';
+            input.focus();
+            // In a real app, clearing would also remove the error state
+            const errorMsg = document.querySelector('[role="alert"]');
+            if(errorMsg) {
+                errorMsg.style.display = 'none';
+                input.classList.remove('border-error');
+                input.classList.add('border-outline-variant');
+            }
+        });
+    </script>
+</body></html>

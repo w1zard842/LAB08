@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Каталог мерчу - News Portal UA</title>
+<meta name="description" content="News Portal UA - Сучасний новинний портал з преміум-підпискою та ексклюзивним магазином мерчу. Надійна журналістика.">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#2a955f",
+                        "surface-container-high": "#eae7e9",
+                        "surface-dim": "#dcd9db",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#002110",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f6f3f4",
+                        "secondary": "#b51822",
+                        "ink-subtle": "#4B5563",
+                        "on-secondary-fixed-variant": "#930013",
+                        "on-surface-variant": "#45464c",
+                        "on-background": "#1b1b1d",
+                        "primary-fixed": "#dce2f7",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb3ad",
+                        "primary-fixed-dim": "#c0c6db",
+                        "surface-container-highest": "#e5e2e3",
+                        "on-surface": "#1b1b1d",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#fcf8fa",
+                        "surface-tint": "#575e70",
+                        "surface-paper": "#FFFFFF",
+                        "outline-variant": "#c6c6cd",
+                        "tertiary-fixed-dim": "#74db9d",
+                        "tertiary": "#000000",
+                        "secondary-fixed": "#ffdad7",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d93537",
+                        "primary": "#000000",
+                        "surface": "#fcf8fa",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#404758",
+                        "on-primary-fixed": "#141b2b",
+                        "state-success": "#38A169",
+                        "tertiary-container": "#002110",
+                        "inverse-primary": "#c0c6db",
+                        "on-secondary-fixed": "#410004",
+                        "tertiary-fixed": "#91f8b8",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f0edee",
+                        "inverse-surface": "#303031",
+                        "background": "#fcf8fa",
+                        "on-primary-container": "#7d8497",
+                        "primary-container": "#141b2b",
+                        "outline": "#76777d",
+                        "inverse-on-surface": "#f3f0f1",
+                        "on-tertiary-fixed-variant": "#00522f",
+                        "surface-variant": "#e5e2e3",
+                        "breaking-news": "#E53E3E",
+                        "on-secondary-container": "#fffbff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "label-bold": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "headline-xl": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["20px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "headline-xl": ["60px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Fallback for Inter font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased pt-20">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-primary dark:bg-primary fixed top-0 w-full z-50 border-b border-outline dark:border-outline-variant flat no shadows transition-transform duration-150">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold text-on-primary" href="index.html">
+                News Portal UA
+            </a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex space-x-6 items-center">
+    <a class="font-label-bold text-label-bold text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200" href="index.html">Головна</a>
+    <a class="font-label-bold text-label-bold text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200" href="categories.html">Категорії</a>
+    <a class="font-label-bold text-label-bold text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200" href="article.html">Статті</a>
+    <a class="font-label-bold text-label-bold text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200" href="pricing.html">Підписка</a>
+    <a class="font-label-bold text-label-bold text-on-primary opacity-100 border-b-2 border-on-primary pb-1 hover:opacity-100 transition-opacity duration-200" href="shop.html">Магазин</a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center space-x-4 text-on-primary">
+<div class="flex items-center space-x-2 font-label-bold text-label-bold">
+<a class="opacity-100" href="#">UA</a>
+<span class="opacity-50">/</span>
+<a class="opacity-50 hover:opacity-100 transition-opacity duration-200" href="#">EN</a>
+</div>
+<button aria-label="Account" class="opacity-50 hover:opacity-100 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT">
+<span class="material-symbols-outlined block">account_circle</span>
+</button>
+<button aria-label="Shopping Cart" class="opacity-50 hover:opacity-100 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT relative">
+<span class="material-symbols-outlined block">shopping_cart</span>
+<span class="absolute -top-1 -right-1 flex h-3 w-3 items-center justify-center rounded-full bg-secondary text-[8px] font-bold text-on-secondary">3</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-container-max mx-auto px-gutter py-section-gap">
+<!-- Header Section -->
+<header class="mb-16 border-b border-outline-variant pb-8">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4">Офіційний мерч</h1>
+<p class="font-body-lg text-body-lg text-ink-subtle max-w-2xl">
+                Носи правду. Підтримай незалежну журналістику за допомогою нашої колекції високоякісного мінімалістичного одягу та аксесуарів, створених для ясності та впливу.
+            </p>
+</header>
+<!-- Catalog Section with Container Queries -->
+<div class="@container w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+<!-- Product 1: Truth T-shirt -->
+<article class="group @2xl:flex @2xl:flex-row flex-col border border-outline-variant hover:border-primary transition-colors duration-200 bg-surface-container-lowest overflow-hidden">
+<div class="@2xl:w-2/5 w-full bg-surface-container flex-shrink-0 aspect-square @2xl:aspect-auto @2xl:min-h-[300px]">
+<img alt="Truth T-shirt" class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500" data-alt="A flat lay photograph of a premium quality white t-shirt featuring a bold, minimalist black typography graphic reading 'TRUTH' across the chest. The shirt rests against a stark, pure white background. High-key studio lighting casts sharp, distinct shadows, emphasizing the high-contrast, modern editorial aesthetic. The mood is authoritative and clean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAyp6BuUj4LW2kuohNbTPcWN6wurB0mdpoQllQHYcWR0DG69wZsIn3aauHTCRIIkJzPubOwzYG8FdMoIqBLIyJueIkLkrJRzEywEOoZFvXp_oqSwNT8QsmhUFflFVQAwiLlrQU-WWlLWNDNTJLAO10_4Ll6ebCxN7J7aW40_dJY6LIizcWzpFJ2MqZslZfHrWW00HzWT_TiWJGtmD6LG9cd03LYEZQ-h0bRfloVFgb1LDwPAnFNPDNn4gIkvDajr5Qzk5ADvYRXhg"/>
+</div>
+<div class="@2xl:w-3/5 w-full p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-ink-subtle mb-2 block">Одяг</span>
+<h2 class="font-headline-md text-headline-md text-primary">Футболка "Правда"</h2>
+</div>
+<span class="font-body-lg text-body-lg font-bold text-primary">$35.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Щільна футболка зі 100% органічної бавовни, створена для довговічності. Сувора чорна типографіка на фоні білосніжної, схожої на папір тканини втілює нашу відданість чітким, неприкрашеним репортажам. Ідеально підходить для щоденного носіння або щоб зробити заяву.
+                        </p>
+<!-- Button pushed to bottom -->
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<label class="sr-only" for="size-1">Розмір</label>
+<select class="border border-outline-variant bg-transparent font-label-bold text-label-bold text-primary py-2 pl-3 pr-8 rounded-DEFAULT focus:border-secondary focus:ring-1 focus:ring-secondary outline-none" id="size-1">
+<option>S</option>
+<option>M</option>
+<option selected="">L</option>
+<option>XL</option>
+</select>
+</div>
+<button class="bg-primary text-on-primary font-label-bold text-label-bold py-3 px-6 rounded-lg hover:bg-on-surface-variant transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+<span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+                                До кошика
+                            </button>
+</div>
+</div>
+</article>
+<!-- Product 2: Insider Hoodie -->
+<article class="group @2xl:flex @2xl:flex-row flex-col border border-outline-variant hover:border-primary transition-colors duration-200 bg-surface-container-lowest overflow-hidden">
+<div class="@2xl:w-2/5 w-full bg-surface-container flex-shrink-0 aspect-square @2xl:aspect-auto @2xl:min-h-[300px]">
+<img alt="Insider Hoodie" class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500" data-alt="A professional product shot of a thick, high-quality black hoodie. The design is strictly minimalist, featuring a small, discrete white embroidered geometric logo on the left chest. It is presented flat on a pristine white surface. High-contrast, dramatic studio lighting highlights the heavy texture of the fabric, creating an authoritative, modern look suited for a premium digital publication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgIhxHoKEt5idc-rKdlxw3HWzoNnr4btsIBhG-97zph31pDpFi3kEL1Gr7Ek4Ve1lcN3MITJSwa8W5qWqyvAvDeAuDUCL4BGzpDbQ1S6cGbv3I5-LDgTLo4smVawMBD1GtoXoBbxfMi5jXMI7ZNe-ufCReMevBJKHflooGoLiQEEi0uiSj0efd_M9lVXsu1HYPDjXYy1_Dm2PrzicwsQJtRpJdb-DPlLItUT6YfnUhY-N1eIaMA65WqqlIvkxw6tqxHeK7LhNTh7c"/>
+</div>
+<div class="@2xl:w-3/5 w-full p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-ink-subtle mb-2 block">Верхній одяг</span>
+<h2 class="font-headline-md text-headline-md text-primary">Худі "Інсайдер"</h2>
+</div>
+<span class="font-body-lg text-body-lg font-bold text-primary">$80.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Створено для тих пізніх ночей у пошуках лідів. Це преміальне щільне худі має тонку, вишиту в тон емблему. Воно пропонує тепло і структуру без шкоди для гладкого, професійного силуету.
+                        </p>
+<!-- Button pushed to bottom -->
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<label class="sr-only" for="size-2">Розмір</label>
+<select class="border border-outline-variant bg-transparent font-label-bold text-label-bold text-primary py-2 pl-3 pr-8 rounded-DEFAULT focus:border-secondary focus:ring-1 focus:ring-secondary outline-none" id="size-2">
+<option>M</option>
+<option selected="">L</option>
+<option>XL</option>
+</select>
+</div>
+<button class="bg-primary text-on-primary font-label-bold text-label-bold py-3 px-6 rounded-lg hover:bg-on-surface-variant transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+<span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+                                До кошика
+                            </button>
+</div>
+</div>
+</article>
+<!-- Product 3: Eco-bag -->
+<article class="group @2xl:flex @2xl:flex-row flex-col border border-outline-variant hover:border-primary transition-colors duration-200 bg-surface-container-lowest overflow-hidden">
+<div class="@2xl:w-2/5 w-full bg-surface-container flex-shrink-0 aspect-square @2xl:aspect-auto @2xl:min-h-[300px]">
+<img alt="Eco-bag" class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500" data-alt="A studio photograph of a sturdy canvas tote bag in a natural off-white color. It features a striking, heavy black ink graphic design related to investigative journalism elements like redacted text bars. The bag is positioned upright against a seamless white background. The lighting is crisp and even, contributing to a stark, high-contrast visual style that feels intellectual and direct." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3Wru9s5SGUW3DVj_lVNoUpNRE15tLRpzQ6zdSo_baZYL8idKCQsc_pD4pcPnvqwDAJwtZEb9q-TIJ_NFHqOKwBfvBEymmisscdUzAlyG5Z_-XotJfNskYl9O9dn9JVlbXv9E4RbplERjJFUn7ht53KQ2c-MwZA5CpUk2GvP6Xn5gH1WUu03bupO2s8I9xDNvW-wB9Ri8XAAvUCVeiD9ZfyZEMfgTnnnKZM5FNvBL41A8Yi6avrR53LotD2DULxfyoZy4ftO0GABw"/>
+</div>
+<div class="@2xl:w-3/5 w-full p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-ink-subtle mb-2 block">Аксесуари</span>
+<h2 class="font-headline-md text-headline-md text-primary">Еко-сумка</h2>
+</div>
+<span class="font-body-lg text-body-lg font-bold text-primary">$25.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Міцна, утилітарна полотняна сумка-тоут, створена для перенесення ваших речей—і ваших матеріалів для читання. Має посилені ручки та сувору, висококонтрастну графіку, що символізує прозорість у медіа. Створена для щоденних поїздок.
+                        </p>
+<!-- Button pushed to bottom -->
+<div class="mt-auto flex justify-end">
+<button class="bg-primary text-on-primary font-label-bold text-label-bold py-3 px-6 rounded-lg hover:bg-on-surface-variant transition-colors flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+<span class="material-symbols-outlined" style="font-size: 18px;">add_shopping_cart</span>
+                                До кошика
+                            </button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-section-gap border-t border-outline dark:border-outline-variant flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-start px-gutter max-w-container-max mx-auto gap-base">
+<div class="mb-8 md:mb-0">
+<a class="font-headline-md text-headline-md font-bold text-primary block mb-2" href="#">
+                    News Portal UA
+                </a>
+<p class="font-body-md text-body-md text-ink-subtle">
+                    © 2024 News Portal UA. Всі права захищені.
+                </p>
+</div>
+<nav class="flex flex-col md:flex-row md:space-x-8 gap-4 md:gap-0">
+<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT px-1" href="#">
+                    Контакти: info@newsportal.ua
+                </a>
+<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT px-1" href="#">
+                    Політика конфіденційності
+                </a>
+<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT px-1" href="#">
+                    Умови надання послуг
+                </a>
+<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT px-1" href="#">
+                    RSS Стрічка
+                </a>
+</nav>
+</div>
+</footer>
+</body></html>

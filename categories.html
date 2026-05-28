@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="uk"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Категорії новин - News Portal UA</title>
+<meta name="description" content="News Portal UA - Сучасний новинний портал з преміум-підпискою та ексклюзивним магазином мерчу. Надійна журналістика.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dce2f7",
+                        "surface-paper": "#FFFFFF",
+                        "primary-fixed-dim": "#c0c6db",
+                        "on-primary-container": "#7d8497",
+                        "secondary-fixed": "#ffdad7",
+                        "secondary": "#b51822",
+                        "breaking-news": "#E53E3E",
+                        "surface-tint": "#575e70",
+                        "surface-variant": "#e5e2e3",
+                        "inverse-primary": "#c0c6db",
+                        "on-primary-fixed-variant": "#404758",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c6c6cd",
+                        "surface-dim": "#dcd9db",
+                        "primary-container": "#141b2b",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eae7e9",
+                        "on-secondary-container": "#fffbff",
+                        "outline": "#76777d",
+                        "surface-container-low": "#f6f3f4",
+                        "tertiary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "state-success": "#38A169",
+                        "tertiary-container": "#002110",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "background": "#fcf8fa",
+                        "on-secondary-fixed": "#410004",
+                        "on-background": "#1b1b1d",
+                        "surface-container-highest": "#e5e2e3",
+                        "on-tertiary-fixed": "#002110",
+                        "tertiary-fixed-dim": "#74db9d",
+                        "on-primary-fixed": "#141b2b",
+                        "surface": "#fcf8fa",
+                        "on-secondary-fixed-variant": "#930013",
+                        "tertiary-fixed": "#91f8b8",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1b1b1d",
+                        "secondary-container": "#d93537",
+                        "ink-subtle": "#4B5563",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#2a955f",
+                        "inverse-on-surface": "#f3f0f1",
+                        "on-surface-variant": "#45464c",
+                        "secondary-fixed-dim": "#ffb3ad",
+                        "primary": "#000000",
+                        "surface-bright": "#fcf8fa",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#303031",
+                        "on-tertiary-fixed-variant": "#00522f",
+                        "surface-container": "#f0edee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["20px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-xl": ["60px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-paper text-on-surface font-body-md antialiased pt-20">
+<!-- TopNavBar -->
+<nav class="bg-primary dark:bg-primary fixed top-0 w-full z-50 border-b border-outline dark:border-outline-variant flat no shadows">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-on-primary" href="index.html">News Portal UA</a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex gap-gutter items-center">
+    <a class="font-label-bold text-label-bold text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200" href="index.html">Головна</a>
+    <a class="font-label-bold text-label-bold text-on-primary opacity-100 border-b-2 border-on-primary pb-1 hover:opacity-100 transition-opacity duration-200" href="categories.html">Категорії</a>
+    <a class="font-label-bold text-label-bold text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200" href="article.html">Статті</a>
+    <a class="font-label-bold text-label-bold text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200" href="pricing.html">Підписка</a>
+    <a class="font-label-bold text-label-bold text-on-primary opacity-50 hover:opacity-100 transition-opacity duration-200" href="shop.html">Магазин</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-base text-on-primary dark:text-on-primary">
+<a href="search.html" aria-label="Search" class="p-2 hover:opacity-100 transition-opacity duration-200">
+    <span class="material-symbols-outlined">search</span>
+</a>
+<button aria-label="Account" class="p-2 hover:opacity-100 transition-opacity duration-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<button aria-label="Cart" class="p-2 hover:opacity-100 transition-opacity duration-200">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap min-h-screen">
+<!-- Page Header -->
+<header class="mb-section-gap text-center">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-4">Категорії новин</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Оберіть розділ, щоб читати найсвіжіші та найважливіші матеріали за темами, які вас цікавлять.
+            </p>
+</header>
+<!-- Categories Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1: Політика -->
+<a class="group block border border-outline-variant bg-surface-paper p-8 transition-colors duration-300 hover:border-primary relative overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300" style="font-size: 32px;">gavel</span>
+<h2 class="font-headline-md text-headline-md text-primary">Політика</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Останні новини політичного життя України та світу. Рішення влади, закони та аналітика.
+                </p>
+</a>
+<!-- Card 2: Технології -->
+<a class="group block border border-outline-variant bg-surface-paper p-8 transition-colors duration-300 hover:border-primary relative overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300" style="font-size: 32px;">memory</span>
+<h2 class="font-headline-md text-headline-md text-primary">Технології</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Інновації, гаджети, IT-сфера, штучний інтелект та визначні наукові відкриття.
+                </p>
+</a>
+<!-- Card 3: Економіка -->
+<a class="group block border border-outline-variant bg-surface-paper p-8 transition-colors duration-300 hover:border-primary relative overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300" style="font-size: 32px;">trending_up</span>
+<h2 class="font-headline-md text-headline-md text-primary">Економіка</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Фінанси, макроекономіка, бізнес, курси валют та експертні економічні прогнози.
+                </p>
+</a>
+<!-- Card 4: Культура -->
+<a class="group block border border-outline-variant bg-surface-paper p-8 transition-colors duration-300 hover:border-primary relative overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300" style="font-size: 32px;">palette</span>
+<h2 class="font-headline-md text-headline-md text-primary">Культура</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Сучасне мистецтво, кінематограф, література, музика та визначні культурні події.
+                </p>
+</a>
+<!-- Card 5: Світ -->
+<a class="group block border border-outline-variant bg-surface-paper p-8 transition-colors duration-300 hover:border-primary relative overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300" style="font-size: 32px;">public</span>
+<h2 class="font-headline-md text-headline-md text-primary">Світ</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Міжнародна панорама, глобальні конфлікти, геополітика та дипломатичні відносини.
+                </p>
+</a>
+<!-- Card 6: Думка -->
+<a class="group block border border-outline-variant bg-surface-paper p-8 transition-colors duration-300 hover:border-primary relative overflow-hidden" href="#">
+<div class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300" style="font-size: 32px;">campaign</span>
+<h2 class="font-headline-md text-headline-md text-primary">Думка</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Аналітика, авторські колонки, погляди експертів та дискусії на актуальні теми.
+                </p>
+</a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-section-gap border-t border-outline dark:border-outline-variant flat no shadows mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start px-gutter max-w-container-max mx-auto gap-base">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary">News Portal UA</span>
+<p class="font-body-md text-body-md text-on-surface">© 2024 News Portal UA. All rights reserved.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors Focus: outline-none ring-2 ring-secondary" href="#">Contact: info@newsportal.ua</a>
+<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors Focus: outline-none ring-2 ring-secondary" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors Focus: outline-none ring-2 ring-secondary" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors Focus: outline-none ring-2 ring-secondary" href="#">RSS Feed</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
