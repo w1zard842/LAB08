@@ -1,40 +1,18 @@
 <!DOCTYPE html>
-
 <html class="light" lang="uk">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Категорії новин - News Portal UA</title>
+    <title>News Portal UA - Думка</title>
     <meta name="description"
-        content="News Portal UA - Сучасний новинний портал з преміум-підпискою та ексклюзивним магазином мерчу. Надійна журналістика.">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+        content="News Portal UA - Аналітика, авторські колонки, погляди експертів та дискусії на актуальні теми.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <style>
-        .material-symbols-outlined {
-            font-family: 'Material Symbols Outlined';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 24px;
-            line-height: 1;
-            letter-spacing: normal;
-            text-transform: none;
-            display: inline-block;
-            white-space: nowrap;
-            word-wrap: normal;
-            direction: ltr;
-            -webkit-font-feature-settings: 'liga';
-            font-feature-settings: 'liga';
-            -webkit-font-smoothing: antialiased;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -130,10 +108,15 @@
             }
         }
     </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 
-<body class="bg-surface-paper text-on-surface font-body-md antialiased pt-20">
-    <!-- TopNavBar -->
+<body class="bg-surface-paper text-on-surface min-h-screen flex flex-col pt-[72px]">
+    <!-- TopNavBar (Shared Component) -->
     <header class="bg-primary text-on-primary absolute md:fixed top-0 w-full z-50 border-b border-outline">
         <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
             <a href="index.html" class="font-headline-md text-headline-md font-bold text-on-primary">News Portal UA</a>
@@ -181,120 +164,110 @@
             </div>
         </div>
     </header>
+
     <!-- Main Content Canvas -->
-    <main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap min-h-screen">
-        <!-- Page Header -->
-        <header class="mb-section-gap text-center">
-            <h1
-                class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-4">
-                Категорії новин</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                Оберіть розділ, щоб читати найсвіжіші та найважливіші матеріали за темами, які вас цікавлять.
+    <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-12 flex flex-col gap-12">
+        <!-- Header Section -->
+        <header class="border-b-2 border-primary pb-6 mt-4">
+            <h1 class="font-headline-xl text-headline-xl text-primary uppercase">Думка</h1>
+            <p class="font-body-lg text-body-lg text-ink-subtle mt-2">
+                Аналітика, авторські колонки, погляди експертів та дискусії на актуальні теми.
             </p>
         </header>
-        <!-- Categories Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-            <!-- Card 1: Політика -->
-            <a class="group block border border-outline-variant bg-surface-paper p-8 transition-all duration-300 hover:border-primary hover:shadow-lg relative overflow-hidden"
-                href="category-politics.html">
-                <div
-                    class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed">
-                </div>
-                <div class="flex items-center gap-4 mb-6">
-                    <span
-                        class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300"
-                        style="font-size: 32px;">gavel</span>
-                    <h2 class="font-headline-md text-headline-md text-primary">Політика</h2>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                    Останні новини політичного життя України та світу. Рішення влади, закони та аналітика.
-                </p>
-            </a>
-            <!-- Card 2: Технології -->
-            <a class="group block border border-outline-variant bg-surface-paper p-8 transition-all duration-300 hover:border-primary hover:shadow-lg relative overflow-hidden"
-                href="category-technology.html">
-                <div
-                    class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed">
-                </div>
-                <div class="flex items-center gap-4 mb-6">
-                    <span
-                        class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300"
-                        style="font-size: 32px;">memory</span>
-                    <h2 class="font-headline-md text-headline-md text-primary">Технології</h2>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                    Інновації, гаджети, IT-сфера, штучний інтелект та визначні наукові відкриття.
-                </p>
-            </a>
-            <!-- Card 3: Економіка -->
-            <a class="group block border border-outline-variant bg-surface-paper p-8 transition-all duration-300 hover:border-primary hover:shadow-lg relative overflow-hidden"
-                href="category-economy.html">
-                <div
-                    class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed">
-                </div>
-                <div class="flex items-center gap-4 mb-6">
-                    <span
-                        class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300"
-                        style="font-size: 32px;">trending_up</span>
-                    <h2 class="font-headline-md text-headline-md text-primary">Економіка</h2>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                    Фінанси, макроекономіка, бізнес, курси валют та експертні економічні прогнози.
-                </p>
-            </a>
-            <!-- Card 4: Спорт -->
-            <a class="group block border border-outline-variant bg-surface-paper p-8 transition-all duration-300 hover:border-primary hover:shadow-lg relative overflow-hidden"
-                href="category-sport.html">
-                <div
-                    class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed">
-                </div>
-                <div class="flex items-center gap-4 mb-6">
-                    <span
-                        class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300"
-                        style="font-size: 32px;">trophy</span>
-                    <h2 class="font-headline-md text-headline-md text-primary">Спорт</h2>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                    Останні новини футболу, баскетболу, боксу, тенісу та світових спортивних турнірів.
-                </p>
-            </a>
-            <!-- Card 5: Світ -->
-            <a class="group block border border-outline-variant bg-surface-paper p-8 transition-all duration-300 hover:border-primary hover:shadow-lg relative overflow-hidden"
-                href="category-world.html">
-                <div
-                    class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed">
-                </div>
-                <div class="flex items-center gap-4 mb-6">
-                    <span
-                        class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300"
-                        style="font-size: 32px;">public</span>
-                    <h2 class="font-headline-md text-headline-md text-primary">Світ</h2>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                    Міжнародна панорама, глобальні конфлікти, геополітика та дипломатичні відносини.
-                </p>
-            </a>
-            <!-- Card 6: Думка -->
-            <a class="group block border border-outline-variant bg-surface-paper p-8 transition-all duration-300 hover:border-primary hover:shadow-lg relative overflow-hidden"
-                href="category-opinion.html">
-                <div
-                    class="absolute top-0 right-0 w-16 h-16 bg-surface-container-low rounded-bl-full -mr-8 -mt-8 transition-transform duration-300 group-hover:scale-150 group-hover:bg-secondary-fixed">
-                </div>
-                <div class="flex items-center gap-4 mb-6">
-                    <span
-                        class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors duration-300"
-                        style="font-size: 32px;">campaign</span>
-                    <h2 class="font-headline-md text-headline-md text-primary">Думка</h2>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                    Аналітика, авторські колонки, погляди експертів та дискусії на актуальні теми.
-                </p>
-            </a>
-        </div>
+
+        <!-- Cards Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter gap-y-12">
+            <!-- Card 1: Education -->
+            <article
+                class="border border-surface-variant p-4 hover:border-primary transition-all duration-300 hover:shadow-lg bg-surface-container-lowest">
+                <a href="article-opinion-education.html" class="flex flex-col gap-3 group h-full">
+                    <div class="relative aspect-[3/2] w-full bg-surface-container-high overflow-hidden">
+                        <img alt="Сучасна університетська освіта"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800" />
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <span
+                            class="font-label-sm text-label-sm text-ink-subtle border border-outline-variant px-2 py-0.5 uppercase tracking-wide">Освіта</span>
+                    </div>
+                    <h3
+                        class="font-body-lg text-body-lg font-bold text-primary leading-tight group-hover:text-secondary transition-colors line-clamp-2">
+                        Авторська колонка: Чому традиційна освіта не встигає за сучасним ринком праці
+                    </h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+                        Колонка Андрія Шевченка про кризу традиційної вищої освіти та її невідповідність динамічним
+                        вимогам ринку.
+                    </p>
+                    <div class="mt-auto pt-4 flex items-center justify-between text-ink-subtle">
+                        <span class="font-label-sm text-label-sm">Сьогодні</span>
+                        <span class="font-label-sm text-label-sm">Андрій Шевченко</span>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 2: Urbanism -->
+            <article
+                class="border border-surface-variant p-4 hover:border-primary transition-all duration-300 hover:shadow-lg bg-surface-container-lowest">
+                <a href="article-opinion-urban.html" class="flex flex-col gap-3 group h-full">
+                    <div class="relative aspect-[3/2] w-full bg-surface-container-high overflow-hidden">
+                        <img alt="Сучасна вулиця та пішохідна інфраструктура"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=800" />
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <span
+                            class="font-label-sm text-label-sm text-ink-subtle border border-outline-variant px-2 py-0.5 uppercase tracking-wide">Урбаністика</span>
+                    </div>
+                    <h3
+                        class="font-body-lg text-body-lg font-bold text-primary leading-tight group-hover:text-secondary transition-colors line-clamp-2">
+                        Погляд урбаніста: Як зробити наші міста зручнішими та безпечнішими для пішоходів
+                    </h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+                        Погляд урбаніста на проблеми автомобілізації сучасних міст та розвиток екологічної пішохідної
+                        інфраструктури.
+                    </p>
+                    <div class="mt-auto pt-4 flex items-center justify-between text-ink-subtle">
+                        <span class="font-label-sm text-label-sm">1 день тому</span>
+                        <span class="font-label-sm text-label-sm">Олександр Кравченко</span>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Card 3: AI -->
+            <article
+                class="border border-surface-variant p-4 hover:border-primary transition-all duration-300 hover:shadow-lg bg-surface-container-lowest">
+                <a href="article-opinion-ai.html" class="flex flex-col gap-3 group h-full">
+                    <div class="relative aspect-[3/2] w-full bg-surface-container-high overflow-hidden">
+                        <img alt="Абстрактне зображення штучного інтелекту"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800" />
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <span
+                            class="font-label-sm text-label-sm text-ink-subtle border border-outline-variant px-2 py-0.5 uppercase tracking-wide">Штучний
+                            інтелект</span>
+                    </div>
+                    <h3
+                        class="font-body-lg text-body-lg font-bold text-primary leading-tight group-hover:text-secondary transition-colors line-clamp-2">
+                        Дискусія: Чи дійсно нейромережі знищать креативні професії?
+                    </h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-1">
+                        Аналіз впливу генеративного штучного інтелекту на майбутнє художників, дизайнерів та
+                        копірайтерів.
+                    </p>
+                    <div class="mt-auto pt-4 flex items-center justify-between text-ink-subtle">
+                        <span class="font-label-sm text-label-sm">2 дні тому</span>
+                        <span class="font-label-sm text-label-sm">Олена Коваленко</span>
+                    </div>
+                </a>
+            </article>
+        </section>
     </main>
+
     <!-- Footer (Shared Component) -->
     <footer class="bg-surface-container-lowest text-on-surface w-full py-section-gap border-t border-outline mt-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start px-gutter max-w-container-max mx-auto gap-base">
+        <div
+            class="flex flex-col md:flex-row justify-between items-start px-gutter max-w-container-max mx-auto gap-base">
             <div class="flex flex-col gap-4 max-w-sm">
                 <a class="font-headline-md text-headline-md font-bold text-primary" href="#">
                     News Portal UA
@@ -306,18 +279,27 @@
             <div class="flex flex-col md:flex-row gap-8 md:gap-16">
                 <div class="flex flex-col gap-2">
                     <h4 class="font-label-bold text-label-bold uppercase text-primary mb-2">Навігація</h4>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="index.html">Головна</a>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="categories.html">Категорії</a>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="article.html">Статті</a>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="pricing.html">Підписка</a>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="shop.html">Магазин</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
+                        href="index.html">Головна</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
+                        href="categories.html">Категорії</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
+                        href="article.html">Статті</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
+                        href="pricing.html">Підписка</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
+                        href="shop.html">Магазин</a>
                 </div>
                 <div class="flex flex-col gap-2">
                     <h4 class="font-label-bold text-label-bold uppercase text-primary mb-2">Інформація</h4>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="mailto:info@newsportal.ua">Контакти: info@newsportal.ua</a>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" data-modal="privacy" href="#">Політика конфіденційності</a>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" data-modal="terms" href="#">Умови використання</a>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" data-modal="rss" href="#">RSS Стрічка</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
+                        href="mailto:info@newsportal.ua">Контакти: info@newsportal.ua</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
+                        data-modal="privacy" href="#">Політика конфіденційності</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
+                        data-modal="terms" href="#">Умови використання</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
+                        data-modal="rss" href="#">RSS Стрічка</a>
                 </div>
             </div>
         </div>

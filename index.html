@@ -121,12 +121,26 @@
             <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity" href="shop.html">Магазин</a>
         </nav>
         <div class="flex items-center gap-2 text-on-primary">
-            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 hover:opacity-100">
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 hover:opacity-100 flex items-center">
                 <span class="material-symbols-outlined">menu</span>
             </button>
-            <a href="search.html" class="p-2 hover:opacity-100"><span class="material-symbols-outlined">search</span></a>
-            <button class="hidden md:block p-2 hover:opacity-100"><span class="material-symbols-outlined">account_circle</span></button>
-            <button class="hidden md:block p-2 hover:opacity-100"><span class="material-symbols-outlined">shopping_cart</span></button>
+            <a href="search.html" class="p-2 hover:opacity-100 flex items-center justify-center"><span class="material-symbols-outlined">search</span></a>
+            <div class="relative hidden md:flex items-center">
+                <button id="profile-menu-btn" class="p-2 hover:opacity-100 flex items-center focus:outline-none" aria-label="Профіль користувача">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+                <!-- Profile Dropdown -->
+                <div id="profile-dropdown" class="hidden absolute right-0 top-full mt-2 w-48 bg-surface-paper text-on-surface border-2 border-primary shadow-[4px_4px_0_0_#000000] z-50">
+                    <div class="flex flex-col">
+                        <a href="#" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Мій акаунт</a>
+                        <a href="#" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Налаштування</a>
+                        <a href="#" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-secondary hover:text-on-secondary transition-colors text-secondary">Вийти</a>
+                    </div>
+                </div>
+            </div>
+            <button id="cart-btn" class="hidden md:flex p-2 hover:opacity-100 items-center focus:outline-none" aria-label="Кошик">
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </button>
         </div>
     </div>
 </header>
@@ -138,7 +152,7 @@
                 Терміново
             </span>
 <p class="font-body-md text-body-md truncate">
-<a class="hover:underline" href="#">Уряд оголосив про нові заходи підтримки малого бізнесу в умовах економічної кризи. Деталі плану.</a>
+<a class="hover:underline" href="article-economy.html">Уряд оголосив про нові заходи підтримки малого бізнесу в умовах економічної кризи. Деталі плану.</a>
 </p>
 </div>
 </div>
@@ -147,15 +161,17 @@
 <!-- Hero Section: Top Story -->
 <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center border-b border-outline pb-12">
 <div class="md:col-span-8 order-2 md:order-1 relative aspect-[16/9] w-full bg-surface-container-high rounded-lg overflow-hidden group">
+<a href="article-tax.html" class="block w-full h-full">
 <img alt="Main Story Image" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out" data-alt="A sweeping, high-contrast black and white photograph of a bustling European parliament hall during a tense debate. The scene is illuminated by harsh overhead gallery lights, casting deep shadows across the faces of politicians in crisp, dark suits. The minimalist, digital newspaper aesthetic is maintained through a stark, almost brutalist composition focusing purely on the subjects and the geometric lines of the architecture. The mood is serious, authoritative, and historically significant, with a stark white light piercing the darkness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2SvSB93N7S6YdIEFSQrn0MtRk-XGzsFr9eCbTO9PXA-XmMyuIWtZ8vyDThOOJpDjEj4fCt90w0TpR6AjyCpy3K8UwTfnQTKUYKLeohwMbuq7Wrxpdnr1sAPml22_S97eB-K6bXMC8d3W-BbRT9YPdit-QzN6B7OdvGGVLFkiOKXWLG-c8CGrF9QOVqXZJXKv5I9-j6Bz3P56wV5zucRxZSKyA1RzedtCfyQKkRgKGlvzlxPZ8uqaE2lXGADUPLqoGLqKIJExrHi8"/>
-<div class="absolute bottom-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-bold text-label-bold uppercase border border-outline">
+</a>
+<div class="absolute bottom-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-bold text-label-bold uppercase border border-outline pointer-events-none">
                     Головна новина
                 </div>
 </div>
 <div class="md:col-span-4 order-1 md:order-2 flex flex-col gap-4">
-<span class="font-label-bold text-label-bold text-ink-subtle uppercase tracking-wider border border-outline-variant px-2 py-1 self-start rounded-sm">Політика</span>
-<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight group-hover:text-ink-subtle transition-colors cursor-pointer">
-                    Новий законопроект обіцяє радикальні зміни в податковій системі
+<a class="font-label-bold text-label-bold text-ink-subtle hover:text-primary transition-colors uppercase tracking-wider border border-outline-variant hover:border-primary px-2 py-1 self-start rounded-sm" href="category-politics.html">Політика</a>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-tight hover:text-secondary transition-colors">
+                    <a href="article-tax.html" class="hover:underline">Новий законопроект обіцяє радикальні зміни в податковій системі</a>
                 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant line-clamp-3">
                     Експерти аналізують можливі наслідки для економіки країни після впровадження нових фіскальних ініціатив, які були представлені сьогодні вранці.
@@ -175,11 +191,12 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter gap-y-12">
 <!-- Card 1 -->
-<article class="flex flex-col gap-3 group cursor-pointer border border-surface-variant p-4 hover:border-primary transition-colors bg-surface-container-lowest">
+<article class="border border-surface-variant p-4 hover:border-primary transition-all duration-300 hover:shadow-lg bg-surface-container-lowest">
+<a href="article-tech.html" class="flex flex-col gap-3 group h-full">
 <div class="relative aspect-[3/2] w-full bg-surface-container-high overflow-hidden">
 <img alt="Technology News" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A close-up, high-contrast shot of a complex computer microchip illuminated by a stark, cool white light against an absolute black background. The metallic circuits gleam sharply, reflecting the minimalist, digital newspaper aesthetic. Small accents of deep crimson highlight specific processors. The mood is clinical, modern, and highly technical, perfect for an authoritative tech journalism piece." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfhpCaz_kZpxgokO666lKFn0i1imh5891JbxAUE3ENxfR8M9VSsOZ0f7Nn5o2ER_yMY3L26JzTz2BJLInwd40QuEq3wl1FZJToV1zN1frN48MqmV4Uc8vNT2PvMOtNJpx9TJINnXvSLh6LjMMNYNWH7mvwXJZrEzFhwie-eszqg5SXfIZ5Nhxsz0AevgcGMadOhvMafLCaCROVuLlE2g6DEvusP-zNnAbr7ZAsHpWzrlCNb_ApqtFJxk3PBVX8xxzjNViNo8fwvrA"/>
 </div>
-<div class="flex gap-2 items-center mt-2">
+<div class="flex gap-2 items-center">
 <span class="font-label-sm text-label-sm text-ink-subtle border border-outline-variant px-2 py-0.5 uppercase tracking-wide">Технології</span>
 </div>
 <h3 class="font-body-lg text-body-lg font-bold text-primary leading-tight group-hover:text-secondary transition-colors line-clamp-2">
@@ -191,13 +208,15 @@
 <div class="mt-auto pt-4 flex items-center justify-between text-ink-subtle">
 <span class="font-label-sm text-label-sm">4 години тому</span>
 </div>
+</a>
 </article>
 <!-- Card 2 -->
-<article class="flex flex-col gap-3 group cursor-pointer border border-surface-variant p-4 hover:border-primary transition-colors bg-surface-container-lowest">
+<article class="border border-surface-variant p-4 hover:border-primary transition-all duration-300 hover:shadow-lg bg-surface-container-lowest">
+<a href="article-currency.html" class="flex flex-col gap-3 group h-full">
 <div class="relative aspect-[3/2] w-full bg-surface-container-high overflow-hidden">
 <img alt="Finance News" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A stark, minimalist image showing a crisp white sheet of financial data overlaid with a sharp, ascending red line graph. The lighting is harsh and direct, casting deep, sharp shadows on the crisp white paper, embodying the high-contrast aesthetic. The background is a solid, deep black surface. The overall mood is serious, analytical, and heavily focused on financial reporting clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZVMeiGbYTN6psCLRgXRmDn81144k7qM5D_TgMWuNlOLgdu5Hg-yfM-s2-d57IKPw_sNPJLO58LU929goDH6bHAd09jj3OaqxfRdWHqd_BH79OL6XuM8q5OHgVbXVxnCaSP0u_KOgnHuSJlppBmaoo3SUJkluOHIiWBgx0nCVlgHFZd1hJQzzAsIxD7n4VH9r09lGeNO_i4pWKLhxlLWdvggnZvKBHzrfniiGRgewiqv89vQGu4zLzvG0yfaZOoA8EogLZ8AaWTCM"/>
 </div>
-<div class="flex gap-2 items-center mt-2">
+<div class="flex gap-2 items-center">
 <span class="font-label-sm text-label-sm text-ink-subtle border border-outline-variant px-2 py-0.5 uppercase tracking-wide">Економіка</span>
 </div>
 <h3 class="font-body-lg text-body-lg font-bold text-primary leading-tight group-hover:text-secondary transition-colors line-clamp-2">
@@ -209,13 +228,15 @@
 <div class="mt-auto pt-4 flex items-center justify-between text-ink-subtle">
 <span class="font-label-sm text-label-sm">5 годин тому</span>
 </div>
+</a>
 </article>
 <!-- Card 3 -->
-<article class="flex flex-col gap-3 group cursor-pointer border border-surface-variant p-4 hover:border-primary transition-colors bg-surface-container-lowest">
+<article class="border border-surface-variant p-4 hover:border-primary transition-all duration-300 hover:shadow-lg bg-surface-container-lowest">
+<a href="article-sport.html" class="flex flex-col gap-3 group h-full">
 <div class="relative aspect-[3/2] w-full bg-surface-container-high overflow-hidden">
 <img alt="Sports News" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A dramatic, high-contrast shot of a solitary athlete stretching in a massive, empty stadium. The scene is shot in stark black and white, with only the glaring white floodlights illuminating the field, creating profound shadows. The composition is highly structured, emphasizing the vast scale of the stadium against the individual. The minimalist, brutalist news style is evident in the unadorned, factual representation of the scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfKeE8byb3YnZv1gPmFcgI1rxzxRBQoCdKO3HcvWHj_vZ9Q2qHJAprfAqtsIaQj0Z_uFn0yIiBQ36jle3AjG8YTlCW9D9XkYGZf38gFaVlUDQc7YRR4Z0jfWKT_eHJ9Y4KHgdp78auxtqOyLzTL-NwT0cNekGj1ZnAU0vcQgGFqskIK_Hgve4lfRza0KWVsTzMpG8mNVcDsDh_rhJMnEdHQLpEGExDo_Cc6xG1bfief5blVYIaD58BIdIrmbkx6T341unU84TQ13A"/>
 </div>
-<div class="flex gap-2 items-center mt-2">
+<div class="flex gap-2 items-center">
 <span class="font-label-sm text-label-sm text-ink-subtle border border-outline-variant px-2 py-0.5 uppercase tracking-wide">Спорт</span>
 </div>
 <h3 class="font-body-lg text-body-lg font-bold text-primary leading-tight group-hover:text-secondary transition-colors line-clamp-2">
@@ -227,6 +248,7 @@
 <div class="mt-auto pt-4 flex items-center justify-between text-ink-subtle">
 <span class="font-label-sm text-label-sm">6 годин тому</span>
 </div>
+</a>
 </article>
 </div>
 </section>
@@ -239,24 +261,54 @@
                     News Portal UA
                 </a>
 <p class="font-body-md text-body-md text-ink-subtle">
-                    © 2024 News Portal UA. All rights reserved.
+                    © 2026 News Portal UA. Всі права захищено.
                 </p>
 </div>
 <div class="flex flex-col md:flex-row gap-8 md:gap-16">
 <div class="flex flex-col gap-2">
 <h4 class="font-label-bold text-label-bold uppercase text-primary mb-2">Навігація</h4>
-<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Home</a>
-<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Categories</a>
-<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Article</a>
+<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="index.html">Головна</a>
+<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="categories.html">Категорії</a>
+<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="article.html">Статті</a>
+<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="pricing.html">Підписка</a>
+<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="shop.html">Магазин</a>
 </div>
 <div class="flex flex-col gap-2">
 <h4 class="font-label-bold text-label-bold uppercase text-primary mb-2">Інформація</h4>
-<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Contact: info@newsportal.ua</a>
-<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Privacy Policy</a>
-<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Terms of Service</a>
-<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">RSS Feed</a>
+<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="mailto:info@newsportal.ua">Контакти: info@newsportal.ua</a>
+<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" data-modal="privacy" href="#">Політика конфіденційності</a>
+<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" data-modal="terms" href="#">Умови використання</a>
+<a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" data-modal="rss" href="#">RSS Стрічка</a>
 </div>
 </div>
 </div>
 </footer>
+
+<!-- Cart Sidebar (Drawer) -->
+<div id="cart-drawer" class="fixed inset-y-0 right-0 w-full sm:w-[400px] bg-surface-paper border-l-2 border-primary z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-[-6px_0_0_0_#000000]">
+    <!-- Drawer Header -->
+    <div class="flex justify-between items-center p-6 border-b-2 border-primary bg-primary text-on-primary">
+        <h2 class="font-headline-md text-headline-md font-bold uppercase tracking-wide">Кошик</h2>
+        <button id="close-cart-btn" class="p-2 hover:opacity-80 flex items-center justify-center focus:outline-none" aria-label="Закрити кошик">
+            <span class="material-symbols-outlined text-[28px]">close</span>
+        </button>
+    </div>
+    <!-- Drawer Content -->
+    <div class="flex-grow p-8 flex flex-col items-center justify-center gap-6 text-center bg-surface-container-lowest">
+        <div class="w-20 h-20 rounded-full border-2 border-primary bg-surface-container-low flex items-center justify-center shadow-[4px_4px_0_0_#000000]">
+            <span class="material-symbols-outlined text-primary text-[40px]">shopping_bag</span>
+        </div>
+        <div class="flex flex-col gap-2">
+            <p class="font-headline-md text-headline-md text-primary uppercase">Ваш кошик порожній</p>
+            <p class="font-body-md text-body-md text-ink-subtle">Додайте товари з нашого магазину мерчу, щоб підтримати якісну журналістику.</p>
+        </div>
+        <a href="shop.html" class="bg-secondary text-on-secondary px-6 py-4 font-label-bold text-label-bold uppercase tracking-wider hover:bg-secondary-container transition-colors border-2 border-primary shadow-[4px_4px_0_0_#000000] inline-block mt-4 focus:outline-none focus:ring-2 focus:ring-secondary">
+            Перейти до магазину
+        </a>
+    </div>
+</div>
+<!-- Cart Drawer Overlay -->
+<div id="cart-overlay" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
+
+<script src="ui.js"></script>
 </body></html>

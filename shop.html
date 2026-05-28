@@ -124,12 +124,26 @@
             <a class="text-on-primary opacity-100 border-b-2 border-on-primary pb-1" href="shop.html">Магазин</a>
         </nav>
         <div class="flex items-center gap-2 text-on-primary">
-            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 hover:opacity-100">
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 hover:opacity-100 flex items-center">
                 <span class="material-symbols-outlined">menu</span>
             </button>
-            <a href="search.html" class="p-2 hover:opacity-100"><span class="material-symbols-outlined">search</span></a>
-            <button class="hidden md:block p-2 hover:opacity-100"><span class="material-symbols-outlined">account_circle</span></button>
-            <button class="hidden md:block p-2 hover:opacity-100"><span class="material-symbols-outlined">shopping_cart</span></button>
+            <a href="search.html" class="p-2 hover:opacity-100 flex items-center justify-center"><span class="material-symbols-outlined">search</span></a>
+            <div class="relative hidden md:flex items-center">
+                <button id="profile-menu-btn" class="p-2 hover:opacity-100 flex items-center focus:outline-none" aria-label="Профіль користувача">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </button>
+                <!-- Profile Dropdown -->
+                <div id="profile-dropdown" class="hidden absolute right-0 top-full mt-2 w-48 bg-surface-paper text-on-surface border-2 border-primary shadow-[4px_4px_0_0_#000000] z-50">
+                    <div class="flex flex-col">
+                        <a href="#" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Мій акаунт</a>
+                        <a href="#" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Налаштування</a>
+                        <a href="#" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-secondary hover:text-on-secondary transition-colors text-secondary">Вийти</a>
+                    </div>
+                </div>
+            </div>
+            <button id="cart-btn" class="hidden md:flex p-2 hover:opacity-100 items-center focus:outline-none" aria-label="Кошик">
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </button>
         </div>
     </div>
 </header>
@@ -241,30 +255,61 @@
 </div>
 </main>
 <!-- Footer (Shared Component) -->
-<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-section-gap border-t border-outline dark:border-outline-variant flat no shadows">
-<div class="flex flex-col md:flex-row justify-between items-start px-gutter max-w-container-max mx-auto gap-base">
-<div class="mb-8 md:mb-0">
-<a class="font-headline-md text-headline-md font-bold text-primary block mb-2" href="#">
-                    News Portal UA
-                </a>
-<p class="font-body-md text-body-md text-ink-subtle">
-                    © 2024 News Portal UA. Всі права захищені.
-                </p>
-</div>
-<nav class="flex flex-col md:flex-row md:space-x-8 gap-4 md:gap-0">
-<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT px-1" href="#">
-                    Контакти: info@newsportal.ua
-                </a>
-<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT px-1" href="#">
-                    Політика конфіденційності
-                </a>
-<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT px-1" href="#">
-                    Умови надання послуг
-                </a>
-<a class="font-body-md text-body-md text-ink-subtle dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors focus:outline-none focus:ring-2 focus:ring-secondary rounded-DEFAULT px-1" href="#">
-                    RSS Стрічка
-                </a>
-</nav>
-</div>
+<footer class="bg-surface-container-lowest text-on-surface w-full py-section-gap border-t border-outline mt-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start px-gutter max-w-container-max mx-auto gap-base">
+        <div class="flex flex-col gap-4 max-w-sm">
+            <a class="font-headline-md text-headline-md font-bold text-primary" href="#">
+                News Portal UA
+            </a>
+            <p class="font-body-md text-body-md text-ink-subtle">
+                © 2026 News Portal UA. Всі права захищено.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+            <div class="flex flex-col gap-2">
+                <h4 class="font-label-bold text-label-bold uppercase text-primary mb-2">Навігація</h4>
+                <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="index.html">Головна</a>
+                <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="categories.html">Категорії</a>
+                <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="article.html">Статті</a>
+                <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="pricing.html">Підписка</a>
+                <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="shop.html">Магазин</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h4 class="font-label-bold text-label-bold uppercase text-primary mb-2">Інформація</h4>
+                <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="mailto:info@newsportal.ua">Контакти: info@newsportal.ua</a>
+                <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" data-modal="privacy" href="#">Політика конфіденційності</a>
+                <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" data-modal="terms" href="#">Умови використання</a>
+                <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" data-modal="rss" href="#">RSS Стрічка</a>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<!-- Cart Sidebar (Drawer) -->
+<div id="cart-drawer" class="fixed inset-y-0 right-0 w-full sm:w-[400px] bg-surface-paper border-l-2 border-primary z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-[-6px_0_0_0_#000000]">
+    <!-- Drawer Header -->
+    <div class="flex justify-between items-center p-6 border-b-2 border-primary bg-primary text-on-primary">
+        <h2 class="font-headline-md text-headline-md font-bold uppercase tracking-wide">Кошик</h2>
+        <button id="close-cart-btn" class="p-2 hover:opacity-80 flex items-center justify-center focus:outline-none" aria-label="Закрити кошик">
+            <span class="material-symbols-outlined text-[28px]">close</span>
+        </button>
+    </div>
+    <!-- Drawer Content -->
+    <div class="flex-grow p-8 flex flex-col items-center justify-center gap-6 text-center bg-surface-container-lowest">
+        <div class="w-20 h-20 rounded-full border-2 border-primary bg-surface-container-low flex items-center justify-center shadow-[4px_4px_0_0_#000000]">
+            <span class="material-symbols-outlined text-primary text-[40px]">shopping_bag</span>
+        </div>
+        <div class="flex flex-col gap-2">
+            <p class="font-headline-md text-headline-md text-primary uppercase">Ваш кошик порожній</p>
+            <p class="font-body-md text-body-md text-ink-subtle">Додайте товари з нашого магазину мерчу, щоб підтримати якісну журналістику.</p>
+        </div>
+        <a href="shop.html" class="bg-secondary text-on-secondary px-6 py-4 font-label-bold text-label-bold uppercase tracking-wider hover:bg-secondary-container transition-colors border-2 border-primary shadow-[4px_4px_0_0_#000000] inline-block mt-4 focus:outline-none focus:ring-2 focus:ring-secondary">
+            Перейти до магазину
+        </a>
+    </div>
+</div>
+<!-- Cart Drawer Overlay -->
+<div id="cart-overlay" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
+
+<script src="ui.js"></script>
 </body></html>
