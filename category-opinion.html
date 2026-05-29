@@ -126,12 +126,16 @@
                 <a class="text-on-primary opacity-100 border-b-2 border-on-primary pb-1"
                     href="categories.html">Категорії</a>
                 <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity"
-                    href="article.html">Статті</a>
+                    href="articles.html">Статті</a>
                 <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity"
                     href="pricing.html">Підписка</a>
                 <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity" href="shop.html">Магазин</a>
             </nav>
             <div class="flex items-center gap-2 text-on-primary">
+            <button onclick="event.preventDefault(); showCustomModal('Англійська версія сайту (EN) наразі знаходиться на етапі перекладу. Слідкуйте за оновленнями!');" class="hidden md:flex items-center border-2 border-black font-bold text-sm tracking-wider mr-4 hover:bg-black hover:text-white transition-colors duration-200">
+      <span class="px-2 py-1 bg-black text-white">UA</span>
+      <span class="px-2 py-1">EN</span>
+   </button>
                 <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
                     class="md:hidden p-2 hover:opacity-100 flex items-center">
                     <span class="material-symbols-outlined">menu</span>
@@ -150,9 +154,9 @@
                             <a href="#"
                                 class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Мій
                                 акаунт</a>
-                            <a href="#"
+                            <a href="#" onclick="event.preventDefault(); showCustomModal('Панель налаштувань тимчасово недоступна. Проводяться планові технічні роботи.');"
                                 class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Налаштування</a>
-                            <a href="#"
+                            <a href="#" onclick="event.preventDefault(); showCustomModal('Ви успішно завершили безпечну сесію. До зустрічі!');"
                                 class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-secondary hover:text-on-secondary transition-colors text-secondary">Вийти</a>
                         </div>
                     </div>
@@ -184,7 +188,7 @@
                     <div class="relative aspect-[3/2] w-full bg-surface-container-high overflow-hidden">
                         <img alt="Сучасна університетська освіта"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800" />
+                            src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" />
                     </div>
                     <div class="flex gap-2 items-center">
                         <span
@@ -284,7 +288,7 @@
                     <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
                         href="categories.html">Категорії</a>
                     <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
-                        href="article.html">Статті</a>
+                        href="articles.html">Статті</a>
                     <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
                         href="pricing.html">Підписка</a>
                     <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -339,6 +343,46 @@
         class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
 
     <script src="ui.js"></script>
+<!-- Custom Brutalist Modal -->
+<div id="customModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden" role="dialog" aria-modal="true">
+    <div class="bg-surface-paper border-4 border-black p-8 max-w-md w-full mx-4 shadow-[8px_8px_0_0_#000000] flex flex-col gap-6">
+        <div class="flex items-center gap-3 border-b-4 border-black pb-4">
+            <span class="material-symbols-outlined text-secondary text-[32px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+            <h2 class="font-headline-md text-headline-md text-primary uppercase font-bold tracking-wide">Сповіщення</h2>
+        </div>
+        <p id="modalText" class="font-body-lg text-body-lg text-primary font-medium leading-relaxed"></p>
+        <button id="closeModalBtn" type="button" class="w-full py-4 bg-black text-white font-label-bold text-label-bold uppercase tracking-wider hover:bg-secondary hover:text-on-secondary transition-colors duration-200 border-2 border-black shadow-[4px_4px_0_0_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none focus:outline-none">
+            Зрозуміло
+        </button>
+    </div>
+</div>
+
+<script>
+function showCustomModal(message) {
+    const modal = document.getElementById('customModal');
+    const modalText = document.getElementById('modalText');
+    if (modal && modalText) {
+        modalText.textContent = message;
+        modal.classList.remove('hidden');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('customModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+    if (modal && closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+        // Close on clicking outside the modal box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+    }
+});
+</script>
 </body>
 
 </html>

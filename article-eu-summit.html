@@ -115,11 +115,15 @@
             <nav id="mobile-menu" class="hidden md:flex flex-col md:flex-row absolute md:static top-[72px] left-0 w-full md:w-auto bg-primary md:bg-transparent p-4 md:p-0 gap-4 md:gap-6 border-b md:border-none border-outline">
                 <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity" href="index.html">Головна</a>
                 <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity" href="categories.html">Категорії</a>
-                <a class="text-on-primary opacity-100 border-b-2 border-on-primary pb-1" href="article.html">Статті</a>
+                <a class="text-on-primary opacity-100 border-b-2 border-on-primary pb-1" href="articles.html">Статті</a>
                 <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity" href="pricing.html">Підписка</a>
                 <a class="text-on-primary opacity-50 hover:opacity-100 transition-opacity" href="shop.html">Магазин</a>
             </nav>
             <div class="flex items-center gap-2 text-on-primary">
+            <button onclick="event.preventDefault(); showCustomModal('Англійська версія сайту (EN) наразі знаходиться на етапі перекладу. Слідкуйте за оновленнями!');" class="hidden md:flex items-center border-2 border-black font-bold text-sm tracking-wider mr-4 hover:bg-black hover:text-white transition-colors duration-200">
+      <span class="px-2 py-1 bg-black text-white">UA</span>
+      <span class="px-2 py-1">EN</span>
+   </button>
                 <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 hover:opacity-100 flex items-center">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
@@ -131,9 +135,9 @@
                     <!-- Profile Dropdown -->
                     <div id="profile-dropdown" class="hidden absolute right-0 top-full mt-2 w-48 bg-surface-paper text-on-surface border-2 border-primary shadow-[4px_4px_0_0_#000000] z-50">
                         <div class="flex flex-col">
-                            <a href="#" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Мій акаунт</a>
-                            <a href="#" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Налаштування</a>
-                            <a href="#" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-secondary hover:text-on-secondary transition-colors text-secondary">Вийти</a>
+                            <a href="#" onclick="event.preventDefault(); showCustomModal('Особистий кабінет знаходиться в розробці. Очікуйте релізу глобальної версії 3.5 з новими AI-функціями!');" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Мій акаунт</a>
+                            <a href="#" onclick="event.preventDefault(); showCustomModal('Панель налаштувань тимчасово недоступна. Проводяться планові технічні роботи.');" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-primary hover:text-on-primary transition-colors border-b border-primary">Налаштування</a>
+                            <a href="#" onclick="event.preventDefault(); showCustomModal('Ви успішно завершили безпечну сесію. До зустрічі!');" class="px-4 py-3 text-left font-label-bold text-label-bold uppercase hover:bg-secondary hover:text-on-secondary transition-colors text-secondary">Вийти</a>
                         </div>
                     </div>
                 </div>
@@ -160,33 +164,48 @@
     <!-- Main Content Grid -->
     <main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-gutter py-12 grid grid-cols-1 lg:grid-cols-12 gap-gutter mt-4">
         <!-- Left Column: Article -->
+        <!-- Left Column: Article -->
+        <!-- Left Column: Article -->
         <article class="lg:col-span-8 flex flex-col gap-6">
             <!-- Breadcrumbs -->
-            <nav class="flex items-center gap-2 text-ink-subtle font-label-sm text-label-sm uppercase tracking-wider">
+            <nav class="flex items-center gap-2 text-ink-subtle font-label-bold text-label-sm uppercase tracking-wider">
                 <a href="index.html" class="hover:text-primary transition-colors">Головна</a>
                 <span>/</span>
                 <a href="categories.html" class="hover:text-primary transition-colors">Категорії</a>
                 <span>/</span>
-                <a href="category-politics.html" class="hover:text-primary transition-colors">Політика</a>
+                <a href="category-politics.html" class="text-secondary font-bold hover:text-primary transition-colors">ПОЛІТИКА</a>
                 <span>/</span>
-                <span class="text-secondary font-bold">Міжнародні відносини</span>
+                <span class="text-primary">МІЖНАРОДНІ ВІДНОСИНИ</span>
             </nav>
 
             <!-- Meta Details -->
-            <div class="flex items-center gap-2 text-ink-subtle font-label-sm text-label-sm">
-                <span class="font-label-bold text-label-bold text-secondary uppercase tracking-wide">Міжнародні відносини</span>
+            <div class="flex items-center gap-2 text-ink-subtle font-label-bold text-label-sm uppercase tracking-wider">
+                <span class="text-secondary font-bold">ПОЛІТИКА</span>
                 <span>•</span>
-                <time datetime="2026-05-28">5 годин тому</time>
+                <time datetime="2026-05-29">29 травня 2026</time>
                 <span>•</span>
-                <span>Від Марії Ковальчук</span>
+                <span>Від Дмитро Козлов</span>
                 <span>•</span>
-                <span>4 хв читання</span>
+                <span>5 хв читання</span>
+            </div>
+
+            <!-- Share Buttons under Metadata -->
+            <div class="flex items-center gap-3 py-2 border-b border-t border-outline-variant my-2">
+                <span class="font-label-bold text-label-bold text-primary uppercase">Поділитися:</span>
+                <button onclick="navigator.clipboard.writeText(window.location.href); showCustomModal('Посилання на статтю скопійовано в буфер обміну!');" class="w-8 h-8 flex items-center justify-center border-2 border-primary bg-surface-paper hover:bg-surface-container-low text-on-surface transition-colors shadow-[2px_2px_0_0_#000000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[2px] active:translate-y-[2px] focus:outline-none" aria-label="Поділитися">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="square" stroke-linejoin="miter" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"></path>
+                    </svg>
+                </button>
+                <button onclick="showCustomModal('Статтю успішно додано до ваших збережених матеріалів!');" class="w-8 h-8 flex items-center justify-center border-2 border-primary bg-surface-paper hover:bg-surface-container-low text-on-surface transition-colors shadow-[2px_2px_0_0_#000000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[2px] active:translate-y-[2px] focus:outline-none" aria-label="Зберегти">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="square" stroke-linejoin="miter" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"></path>
+                    </svg>
+                </button>
             </div>
 
             <!-- Headline -->
-            <h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-primary max-w-[800px] leading-tight">
-                Саміт ЄС: лідери узгодили новий пакет стратегічної співпраці
-            </h1>
+            <h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-primary max-w-[800px] leading-tight">Саміт ЄС: лідери узгодили новий пакет стратегічної співпраці</h1>
 
             <!-- Hero Image -->
             <figure class="w-full relative aspect-video bg-surface-container border border-surface-variant rounded-DEFAULT overflow-hidden my-4 shadow-[4px_4px_0_0_#000000]">
@@ -215,17 +234,17 @@
                 </p>
             </div>
 
-            <!-- Share Actions -->
-            <div class="flex items-center gap-4 mt-8 pt-4 border-t border-outline-variant">
-                <span class="font-label-bold text-label-bold text-primary">Поділитися:</span>
-                <button class="w-10 h-10 flex items-center justify-center border-2 border-primary rounded hover:bg-surface-container-low text-on-surface transition-colors shadow-[2px_2px_0_0_#000000]">
-                    <span class="material-symbols-outlined">share</span>
-                </button>
-                <button class="w-10 h-10 flex items-center justify-center border-2 border-primary rounded hover:bg-surface-container-low text-on-surface transition-colors shadow-[2px_2px_0_0_#000000]">
-                    <span class="material-symbols-outlined">bookmark</span>
-                </button>
+            <!-- Key Takeaways Block (Moved Down) -->
+            <div class="p-6 bg-surface-container-low border-2 border-primary shadow-[4px_4px_0_0_#000000] my-6">
+                <h3 class="font-label-bold text-label-bold uppercase text-primary mb-4 tracking-wider">Ключові тези</h3>
+                <ul class="list-disc pl-5 space-y-2 text-body-md font-body-md text-on-surface">
+                    <li>Лідери країн ЄС погодили новий масштабний пакет фінансової допомоги та стратегічного оборонного партнерства.</li>
+                    <li>Досягнуто консенсусу щодо спільних економічних санкцій та інвестицій у зелену енергетику та безпекові проекти.</li>
+                    <li>Рішення саміту спрямовані на стабілізацію політичної ситуації та зміцнення солідарності між європейськими державами.</li>
+                </ul>
             </div>
         </article>
+
 
         <!-- Right Column: Sidebar -->
         <aside class="lg:col-span-4 flex flex-col gap-8 lg:pl-gutter border-t lg:border-t-0 lg:border-l border-outline-variant pt-8 lg:pt-0 mt-8 lg:mt-0">
@@ -235,25 +254,72 @@
                     Популярні новини
                 </h3>
                 <a class="group block border border-outline-variant rounded p-4 hover:border-primary transition-all duration-200 hover:shadow bg-surface-paper" href="article-tax.html">
-                    <span class="font-label-sm text-label-sm text-secondary font-bold uppercase block mb-1">Політика</span>
+                    <span class="font-label-sm text-label-sm text-secondary font-bold uppercase block mb-1">ПОЛІТИКА</span>
                     <h4 class="font-body-md text-body-md font-bold text-primary group-hover:underline">Новий законопроект обіцяє радикальні зміни в податковій системі</h4>
                     <span class="font-label-sm text-label-sm text-ink-subtle block mt-2">2 години тому</span>
                 </a>
-                <a class="group block border border-outline-variant rounded p-4 hover:border-primary transition-all duration-200 hover:shadow bg-surface-paper" href="article-economy.html">
-                    <span class="font-label-sm text-label-sm text-secondary font-bold uppercase block mb-1">Економіка</span>
-                    <h4 class="font-body-md text-body-md font-bold text-primary group-hover:underline">Уряд оголосив про нові заходи підтримки малого бізнесу</h4>
+                <a class="group block border border-outline-variant rounded p-4 hover:border-primary transition-all duration-200 hover:shadow bg-surface-paper" href="article-currency.html">
+                    <span class="font-label-sm text-label-sm text-secondary font-bold uppercase block mb-1">ЕКОНОМІКА</span>
+                    <h4 class="font-body-md text-body-md font-bold text-primary group-hover:underline">Курс валют: що очікувати на наступному тижні</h4>
                     <span class="font-label-sm text-label-sm text-ink-subtle block mt-2">5 годин тому</span>
                 </a>
-                <a class="group block border border-outline-variant rounded p-4 hover:border-primary transition-all duration-200 hover:shadow bg-surface-paper relative overflow-hidden" href="article-tech.html">
+                <a class="group block border border-outline-variant rounded p-4 hover:border-primary transition-all duration-200 hover:shadow bg-surface-paper relative overflow-hidden" href="article-ai-journalism.html">
                     <div class="absolute top-0 left-0 w-1 h-full bg-breaking-news"></div>
                     <span class="font-label-sm text-label-sm text-breaking-news font-bold uppercase flex items-center gap-1 mb-1">
                         <span class="material-symbols-outlined text-[14px]">campaign</span> Терміново
                     </span>
-                    <h4 class="font-body-md text-body-md font-bold text-primary group-hover:underline">Штучний інтелект: нові можливості чи загроза для ринку праці?</h4>
-                    <span class="font-label-sm text-label-sm text-ink-subtle block mt-2">4 години тому</span>
+                    <h4 class="font-body-md text-body-md font-bold text-primary group-hover:underline">Майбутнє ШІ в сучасній журналістиці: Навігація в епоху інформаційної щільності</h4>
+                    <span class="font-label-sm text-label-sm text-ink-subtle block mt-2">Щойно</span>
                 </a>
             </div>
+
+            <!-- Daily Briefing Newsletter Subscription -->
+            <div class="border-2 border-primary p-6 bg-surface-paper shadow-[4px_4px_0_0_#000000]">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="material-symbols-outlined text-secondary">mail</span>
+                    <h4 class="font-label-bold text-label-bold uppercase text-primary">Щоденне зведення</h4>
+                </div>
+                <p class="font-body-md text-body-md text-ink-subtle mb-4">
+                    Отримуйте головні новини та аналітику на свою електронну скриньку щоранку.
+                </p>
+                <form class="flex flex-col gap-3">
+                    <input type="email" placeholder="Ваша пошта" required class="w-full px-3 py-2 border-2 border-primary focus:outline-none focus:ring-2 focus:ring-secondary text-body-md font-body-md bg-surface-container-lowest" />
+                    <button type="submit" onclick="event.preventDefault(); showCustomModal('Дякуємо! Ви успішно підписалися на щоденне зведення.');" class="w-full py-2.5 bg-primary text-on-primary font-label-bold text-label-bold uppercase tracking-wider hover:bg-secondary transition-colors duration-200 border-2 border-primary shadow-[2px_2px_0_0_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none">
+                        Підписатися
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Categories Tags in Sidebar -->
+            <div class="flex flex-col gap-4">
+                <h3 class="font-headline-md text-headline-md text-primary border-b-2 border-primary pb-2 inline-block">
+                    Категорії
+                </h3>
+                <div class="flex flex-wrap gap-2.5">
+                    <a href="category-politics.html" class="px-3 py-1.5 border-2 border-primary bg-surface-paper hover:bg-primary hover:text-on-primary transition-colors font-label-bold text-label-sm uppercase tracking-wider shadow-[2px_2px_0_0_#000000] hover:shadow-none translate-y-0 active:translate-y-[2px]">
+                        Політика
+                    </a>
+                    <a href="category-technology.html" class="px-3 py-1.5 border-2 border-primary bg-surface-paper hover:bg-primary hover:text-on-primary transition-colors font-label-bold text-label-sm uppercase tracking-wider shadow-[2px_2px_0_0_#000000] hover:shadow-none translate-y-0 active:translate-y-[2px]">
+                        Технології
+                    </a>
+                    <a href="category-economy.html" class="px-3 py-1.5 border-2 border-primary bg-surface-paper hover:bg-primary hover:text-on-primary transition-colors font-label-bold text-label-sm uppercase tracking-wider shadow-[2px_2px_0_0_#000000] hover:shadow-none translate-y-0 active:translate-y-[2px]">
+                        Економіка
+                    </a>
+                    <a href="category-sport.html" class="px-3 py-1.5 border-2 border-primary bg-surface-paper hover:bg-primary hover:text-on-primary transition-colors font-label-bold text-label-sm uppercase tracking-wider shadow-[2px_2px_0_0_#000000] hover:shadow-none translate-y-0 active:translate-y-[2px]">
+                        Спорт
+                    </a>
+                    <a href="category-opinion.html" class="px-3 py-1.5 border-2 border-primary bg-surface-paper hover:bg-primary hover:text-on-primary transition-colors font-label-bold text-label-sm uppercase tracking-wider shadow-[2px_2px_0_0_#000000] hover:shadow-none translate-y-0 active:translate-y-[2px]">
+                        Думка
+                    </a>
+                    <a href="category-world.html" class="px-3 py-1.5 border-2 border-primary bg-surface-paper hover:bg-primary hover:text-on-primary transition-colors font-label-bold text-label-sm uppercase tracking-wider shadow-[2px_2px_0_0_#000000] hover:shadow-none translate-y-0 active:translate-y-[2px]">
+                        Світ
+                    </a>
+                </div>
+            </div>
+
         </aside>
+
+
     </main>
 
     <!-- Footer (Shared Component) -->
@@ -272,7 +338,7 @@
                     <h4 class="font-label-bold text-label-bold uppercase text-primary mb-2">Навігація</h4>
                     <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="index.html">Головна</a>
                     <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="categories.html">Категорії</a>
-                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="article.html">Статті</a>
+                    <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="articles.html">Статті</a>
                     <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="pricing.html">Підписка</a>
                     <a class="font-body-md text-body-md text-ink-subtle hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="shop.html">Магазин</a>
                 </div>
@@ -314,5 +380,45 @@
     <div id="cart-overlay" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
 
     <script src="ui.js"></script>
+<!-- Custom Brutalist Modal -->
+<div id="customModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden" role="dialog" aria-modal="true">
+    <div class="bg-surface-paper border-4 border-black p-8 max-w-md w-full mx-4 shadow-[8px_8px_0_0_#000000] flex flex-col gap-6">
+        <div class="flex items-center gap-3 border-b-4 border-black pb-4">
+            <span class="material-symbols-outlined text-secondary text-[32px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+            <h2 class="font-headline-md text-headline-md text-primary uppercase font-bold tracking-wide">Сповіщення</h2>
+        </div>
+        <p id="modalText" class="font-body-lg text-body-lg text-primary font-medium leading-relaxed"></p>
+        <button id="closeModalBtn" type="button" class="w-full py-4 bg-black text-white font-label-bold text-label-bold uppercase tracking-wider hover:bg-secondary hover:text-on-secondary transition-colors duration-200 border-2 border-black shadow-[4px_4px_0_0_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none focus:outline-none">
+            Зрозуміло
+        </button>
+    </div>
+</div>
+
+<script>
+function showCustomModal(message) {
+    const modal = document.getElementById('customModal');
+    const modalText = document.getElementById('modalText');
+    if (modal && modalText) {
+        modalText.textContent = message;
+        modal.classList.remove('hidden');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('customModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+    if (modal && closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+        // Close on clicking outside the modal box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>

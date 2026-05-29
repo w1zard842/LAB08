@@ -121,7 +121,7 @@ plansContainer.addEventListener('click', (event) => {
       btn.className = 'w-full py-3 bg-state-success text-on-primary font-label-bold rounded-lg flex justify-center items-center gap-2';
       btn.innerHTML = `<span class="material-symbols-outlined">check_circle</span> Підтверджено!`;
       
-      alert(`Дякуємо! Ви успішно обрали тариф: ${planName}`);
+      showCustomModal(`Дякуємо! Ви успішно обрали тариф: ${planName}`);
       
       setTimeout(() => {
         btn.className = originalColor;
