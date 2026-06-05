@@ -1,3 +1,30 @@
+# 📰 News Portal UA
+
+Сучасний фронтенд-проєкт новинного порталу (Лабораторна робота №8). Проєкт демонструє побудову складного інтерфейсу користувача за допомогою HTML, Tailwind CSS та Vanilla JavaScript.
+
+## 🚀 Основний функціонал
+- **Стрічка новин та категорії:** Структурований вивід статей з тегами, авторами та часом публікації.
+- **Динамічний пошук:** Живий пошук по статтях за ключовими словами та тегами.
+- **Система підписок:** Асинхронне завантаження тарифних планів (місячні/річні) з JSON-файлу.
+- **Магазин мерчу (E-commerce):** Сторінка товарів із вибором розмірів та функціональним кошиком (Drawer), що зберігає дані у `localStorage`.
+- **UI/UX:** Адаптивна навігація, кастомні бруталістичні модальні вікна, підтримка мобільних пристроїв.
+
+## 🛠 Технології
+- **Структура:** HTML5
+- **Стилізація:** Tailwind CSS (через CDN із кастомним конфігом констант)
+- **Логіка:** Vanilla JavaScript
+- **Типографіка та іконки:** Google Fonts (Inter), Material Symbols.
+
+## 📁 Структура директорій
+- `index.html` — Головна сторінка з breaking news.
+- `categories.html` / `category-*.html` — Сторінки розділів.
+- `articles.html` / `article-*.html` — Шаблони для читання новин.
+- `pricing.html` / `pricing.js` / `pricing.json` — Сторінка підписок та логіка рендеру.
+- `shop.html` — Магазин мерчу.
+- `search.html` — Сторінка пошукової системи.
+- `ui.js` — Глобальні скрипти (навігація, кошик, модальні вікна).
+
+
 ---
 name: Precision Journal
 colors:
@@ -224,123 +251,13 @@ spacing:
 
 
 
-## Brand & Style
+Brand & Style:
+The design system is anchored in a Minimalist High-Contrast aesthetic, specifically tailored for high-stakes journalism and information density. It prioritizes clarity and authority, evoking a sense of "digital paper".
 
-The design system is anchored in a **Minimalist High-Contrast** aesthetic, specifically tailored for high-stakes journalism and information density. It prioritizes clarity and authority, evoking a sense of "digital paper"—where the content is the primary focus and the UI exists as a silent, structured frame.
+Components:
 
-The personality is intellectual and direct. By utilizing heavy weight distribution in headers and a stark white canvas for the reading experience, the system establishes an immediate sense of trustworthiness. This is a modern evolution of the classic broadsheet, stripped of clutter and optimized for rapid comprehension across digital surfaces.
+Buttons: Rectangular with a 0.25rem radius. High-contrast Primary background.
 
-## Colors
+Cards: 1px stroke. Subtle hover state where the border color darkens.
 
-The palette is dominated by a high-contrast "Ink and Paper" relationship. The **Primary** color is a deep, near-black slate used for structural elements like global navigation and footers, providing a heavy anchor for the interface. 
-
-The **Secondary** color is a vibrant modern red, reserved exclusively for "Breaking News" indicators and high-priority Calls to Action. This ensures that urgency is conveyed without diluting the professional tone of the rest of the site. **Tertiary** green is utilized for positive status feedback and confirmation states. Neutral grays are used sparingly to define hierarchy in metadata without distracting from the main narrative.
-
-## Typography
-
-This design system utilizes **Inter** across all levels to maintain a systematic and utilitarian feel. The hierarchy is extreme, with heavy-weight, tightly-tracked headlines contrasting against airy, highly-legible body text.
-
-For long-form reading, `body-lg` uses a generous 1.7 line height to reduce eye fatigue. Labels and metadata utilize a bold, uppercase style with increased letter spacing to clearly differentiate secondary information from the primary editorial content. Mobile typography scales aggressively to ensure headlines remain impactful on smaller viewports without breaking layout integrity.
-
-## Layout & Spacing
-
-The layout follows a **Fixed Grid** philosophy for desktop to maintain the authoritative structure of a newspaper, transitioning to a fluid model for mobile devices. A 12-column grid is used for the homepage and category views, while long-form articles use a centered 8-column layout to optimize line length for readability.
-
-Vertical rhythm is strictly managed in multiples of 8px. Large section gaps (80px+) are used to separate different news clusters, ensuring the "Minimalist" feel is preserved through intentional whitespace. Sticky navigation is a core requirement, providing a persistent "Primary" dark bar at the top of the viewport to keep essential tools within reach as users scroll through long-form content.
-
-## Elevation & Depth
-
-This design system avoids traditional shadows in favor of **Low-Contrast Outlines** and **Tonal Layers**. Depth is communicated through structural separation rather than physical metaphors.
-
-1.  **Level 0 (Base):** The pure white background.
-2.  **Level 1 (Cards):** Defined by a 1px solid border (#E2E8F0) rather than a shadow.
-3.  **Level 2 (Sticky Nav):** Uses a high-contrast Primary fill (#111827) to sit "above" the content without needing a blur or shadow effect.
-4.  **Level 3 (Overlays):** For modals or dropdowns, a sharp 4px hard shadow is used to maintain the "Modern Brutalist" editorial feel, rather than soft ambient shadows.
-
-## Shapes
-
-The shape language is **Soft (0.25rem)**. This slight rounding takes the edge off a purely "Brutalist" look, making the UI feel modern and sophisticated rather than harsh. 
-
-Large-scale components like high-contrast cards use the `rounded-lg` (0.5rem) token to feel substantial, while smaller elements like tags and input fields use the base `rounded` (0.25rem) token. Interactive elements never use pill-shapes, as the system relies on rectangular geometry to convey journalistic stability.
-
-## Components
-
-### Buttons
-Buttons are rectangular with a 0.25rem radius.
-- **Default:** High-contrast Primary background with white text.
-- **Processing:** Primary background at 80% opacity with a subtle loading spinner.
-- **Success:** Solid Tertiary Green background with a checkmark icon.
-
-### Cards
-High-contrast cards are defined by a 1px stroke. Headlines within cards are consistently `headline-md`. Article cards should have a subtle hover state where the border color darkens to the Primary color, signaling interactivity without shifting pixels.
-
-### Inputs & Form Fields
-Fields use a 1px border. On focus, the border weight remains the same but changes to the Secondary color (Red) to provide a sharp, clear indication of activity.
-
-### Sticky Navigation
-The main navigation bar is fixed to the top of the viewport. It uses the deep Primary dark color. Links are white with a 50% opacity in their resting state, shifting to 100% opacity on hover.
-
-### Chips & Tags
-Tags for categories (e.g., "Politics", "Tech") use the `label-bold` typography. They are styled as ghost-chips with a light gray border and no fill, ensuring they do not compete with "Breaking News" badges.
-
-
-
-
-## Brand & Style
-
-The design system is anchored in a **Minimalist High-Contrast** aesthetic, specifically tailored for high-stakes journalism and information density. It prioritizes clarity and authority, evoking a sense of "digital paper"—where the content is the primary focus and the UI exists as a silent, structured frame.
-
-The personality is intellectual and direct. By utilizing heavy weight distribution in headers and a stark white canvas for the reading experience, the system establishes an immediate sense of trustworthiness. This is a modern evolution of the classic broadsheet, stripped of clutter and optimized for rapid comprehension across digital surfaces.
-
-## Colors
-
-The palette is dominated by a high-contrast "Ink and Paper" relationship. The **Primary** color is a deep, near-black slate used for structural elements like global navigation and footers, providing a heavy anchor for the interface. 
-
-The **Secondary** color is a vibrant modern red, reserved exclusively for "Breaking News" indicators and high-priority Calls to Action. This ensures that urgency is conveyed without diluting the professional tone of the rest of the site. **Tertiary** green is utilized for positive status feedback and confirmation states. Neutral grays are used sparingly to define hierarchy in metadata without distracting from the main narrative.
-
-## Typography
-
-This design system utilizes **Inter** across all levels to maintain a systematic and utilitarian feel. The hierarchy is extreme, with heavy-weight, tightly-tracked headlines contrasting against airy, highly-legible body text.
-
-For long-form reading, `body-lg` uses a generous 1.7 line height to reduce eye fatigue. Labels and metadata utilize a bold, uppercase style with increased letter spacing to clearly differentiate secondary information from the primary editorial content. Mobile typography scales aggressively to ensure headlines remain impactful on smaller viewports without breaking layout integrity.
-
-## Layout & Spacing
-
-The layout follows a **Fixed Grid** philosophy for desktop to maintain the authoritative structure of a newspaper, transitioning to a fluid model for mobile devices. A 12-column grid is used for the homepage and category views, while long-form articles use a centered 8-column layout to optimize line length for readability.
-
-Vertical rhythm is strictly managed in multiples of 8px. Large section gaps (80px+) are used to separate different news clusters, ensuring the "Minimalist" feel is preserved through intentional whitespace. Sticky navigation is a core requirement, providing a persistent "Primary" dark bar at the top of the viewport to keep essential tools within reach as users scroll through long-form content.
-
-## Elevation & Depth
-
-This design system avoids traditional shadows in favor of **Low-Contrast Outlines** and **Tonal Layers**. Depth is communicated through structural separation rather than physical metaphors.
-
-1.  **Level 0 (Base):** The pure white background.
-2.  **Level 1 (Cards):** Defined by a 1px solid border (#E2E8F0) rather than a shadow.
-3.  **Level 2 (Sticky Nav):** Uses a high-contrast Primary fill (#111827) to sit "above" the content without needing a blur or shadow effect.
-4.  **Level 3 (Overlays):** For modals or dropdowns, a sharp 4px hard shadow is used to maintain the "Modern Brutalist" editorial feel, rather than soft ambient shadows.
-
-## Shapes
-
-The shape language is **Soft (0.25rem)**. This slight rounding takes the edge off a purely "Brutalist" look, making the UI feel modern and sophisticated rather than harsh. 
-
-Large-scale components like high-contrast cards use the `rounded-lg` (0.5rem) token to feel substantial, while smaller elements like tags and input fields use the base `rounded` (0.25rem) token. Interactive elements never use pill-shapes, as the system relies on rectangular geometry to convey journalistic stability.
-
-## Components
-
-### Buttons
-Buttons are rectangular with a 0.25rem radius.
-- **Default:** High-contrast Primary background with white text.
-- **Processing:** Primary background at 80% opacity with a subtle loading spinner.
-- **Success:** Solid Tertiary Green background with a checkmark icon.
-
-### Cards
-High-contrast cards are defined by a 1px stroke. Headlines within cards are consistently `headline-md`. Article cards should have a subtle hover state where the border color darkens to the Primary color, signaling interactivity without shifting pixels.
-
-### Inputs & Form Fields
-Fields use a 1px border. On focus, the border weight remains the same but changes to the Secondary color (Red) to provide a sharp, clear indication of activity.
-
-### Sticky Navigation
-The main navigation bar is fixed to the top of the viewport. It uses the deep Primary dark color. Links are white with a 50% opacity in their resting state, shifting to 100% opacity on hover.
-
-### Chips & Tags
-Tags for categories (e.g., "Politics", "Tech") use the `label-bold` typography. They are styled as ghost-chips with a light gray border and no fill, ensuring they do not compete with "Breaking News" badges.
+Modals & Overlays: Sharp 4px hard shadow to maintain the "Modern Brutalist" editorial feel.
